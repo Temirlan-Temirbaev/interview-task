@@ -43,7 +43,7 @@ export default function Home() {
         </button> : null}
       </div>
       <div>
-        <p className={styles.result}>You'r message : {aes256.decrypt(process.env.NEXT_PUBLIC_SECRET_KEY, data)}</p>
+        <p className={styles.result}>You'r message : {data && aes256.decrypt(process.env.NEXT_PUBLIC_SECRET_KEY, data)}</p>
       </div>
     </main>
   );
